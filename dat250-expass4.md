@@ -11,10 +11,7 @@ During the installation and usage of JPA, I encountered several technical issues
     Testing Failures Due to Missing Data: In my test cases, Hibernate was unable to locate certain records (such as Customer) because the database was empty. This issue was addressed by ensuring the correct sequence of test execution. I ran the main method of the CreditCardsMain class to populate the database with initial data before running the test cases, which ensured that the data required for testing was available.
 Link to the Code for Experiment 2
 
-You can access the code for Experiment 2, including the passing test cases, at the following link:
-
-GitHub Repository for Experiment 2
-(Note: Make sure to replace # with the actual URL to your code repository.)
+You can access the code for Experiment 2, including the passing test cases, at the following link:https://github.com/nmotamayor/dat250-jpa-tutorial/tree/master/src/main/java/no/hvl/dat250/jpa/tutorial/creditcards
 
 The included test cases now pass successfully, as verified by running them in IntelliJ and observing the results in the build logs.
 Explanation of How I Inspected the Database Tables and What Tables Were Created
@@ -30,9 +27,7 @@ The following tables were created in the database:
     Pincode: Stores PIN code information for credit cards.
     Person, Job, Family: Created for the relationship management between people and their jobs.
 
-Here’s a screenshot showing the inspected tables in the H2 console:
 
-(Screenshot Placeholder - Add the actual screenshot of your H2 console displaying the tables and structure.)
 Pending Issues With This Assignment
 
 At the time of completion, all major issues with this assignment have been resolved. The test cases pass successfully, the entities are properly mapped, and the database tables are correctly generated and populated. There are no pending issues or unsolved problems at this stage.
