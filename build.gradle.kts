@@ -1,5 +1,7 @@
 plugins {
     application
+    id("org.springframework.boot") version "3.1.2"  // Add this line for Spring Boot
+    id("io.spring.dependency-management") version "1.1.3"
 }
 
 repositories {
@@ -13,17 +15,23 @@ dependencies {
     implementation("com.h2database:h2:2.2.220")
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("org.postgresql:postgresql:42.7.4")
+
+    implementation("org.springframework.boot:spring-boot-starter")  // Add Spring Boot starter
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")  // For JPA
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
+
 application {
-    mainClass = "no.hvl.dat250.jpa.tutorial.basicexample.Main"
+    mainClass.set("no.hvl.dat250.jpa.tutorial.basicexample.Main")
 }
+
 
 
 tasks.named<Test>("test") {
